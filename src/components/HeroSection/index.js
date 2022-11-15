@@ -14,7 +14,7 @@ class HeroSection extends Component {
     {
       
     return (
-        
+        <>
         <HeroContainer id="home">
             <HeroBg>
               <img alt="Hero" src={Hero1}/>
@@ -23,7 +23,7 @@ class HeroSection extends Component {
             <HeroH1> Hero Section </HeroH1>
             </HeroContent>
         </HeroContainer>
-        
+        </>
     )
     }
 }

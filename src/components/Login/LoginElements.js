@@ -14,6 +14,7 @@ export const MainContainer = styled.div`
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
+
   @media only screen and (max-width: 320px) {
     width: 80vw;
     height: 90vh;
@@ -24,6 +25,9 @@ export const MainContainer = styled.div`
       font-size: small;
     }
   }
+
+
+  
   @media only screen and (min-width: 360px) {
     width: 80vw;
     height: 90vh;

@@ -12,7 +12,7 @@ render()
     <>
     <Router>
       <Switch>
-        <Route path="/" component={Login} exact />
+        <Route path="/" component={Home} exact />
       </Switch>
     </Router>
     </>

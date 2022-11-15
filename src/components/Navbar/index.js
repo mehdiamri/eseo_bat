@@ -5,10 +5,10 @@ import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll } from 'react-scroll';
 import Logo from '../../images/Logo.png'
 import {LoginButton } from '../Buttons/LoginButton';
-
+import Login from '../Login';
 const Navbar = ({ toggle }) => {
     const [scrollNav, setScrollNav] = useState(false)
-
+    const [openModal, setOpenModal] = useState(false)
     const changeNav = ()=> {
         if(window.scrollY >= 80) {
             setScrollNav(true)
@@ -24,6 +24,8 @@ const Navbar = ({ toggle }) => {
     const toggleHome = () => {
         scroll.scrollToTop();
     }
+    console.log(openModal)
+
     return (
        <>
        <IconContext.Provider value={{ color: '#fff'}}>
@@ -64,8 +66,7 @@ const Navbar = ({ toggle }) => {
 
 
                    <LoginButton
-                
-                    onClick={(event) => (window.location.href = "/about")}
+                   onClick={()=>{setOpenModal(!openModal)}}
                     smooth={true}
                     duration={500}
                     spy={true}
@@ -75,10 +76,13 @@ const Navbar = ({ toggle }) => {
                     dark={true}
                     dark2={true}                    
                     >
-                        Login 
+
+                        Login
+
                     </LoginButton> 
                    
-                   
+                   <Login openModal={openModal}/>
+                
                </NavMenu>
                <NavBtn>
                </NavBtn>
